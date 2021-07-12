@@ -24,8 +24,11 @@ export class TemaComponent implements OnInit {
       //alert('sua seção expirou, faça o login novamente')
       this.router.navigate(['/entrar'])
 
-      this.findAlltemas()
     }
+
+    this.temaService.refreshToken()
+
+    this.findAlltemas()
   }
 
   findAlltemas(){
